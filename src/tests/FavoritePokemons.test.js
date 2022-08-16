@@ -5,8 +5,9 @@ import { readFavoritePokemonIds } from '../services/pokedexService';
 import renderWithRouter from './renderWithRouter';
 
 describe('Verifica todas as funcionalidades do component Favorite Pokemons', () => {
-  test('Se é exibida na tela a mensagem No favorite pokemon found, '
-    + 'caso a pessoa não tenha pokémons favoritos;', () => {
+  test('Se é exibida na tela a mensagem "No favorite pokemon found", '
+    + 'caso a pessoa não tenha pokémons favoritos. '
+    + 'Caso ter algum favorito checar se foi exibido na tela', () => {
     renderWithRouter(<FavoritePokemons />);
     const favoritesQuantity = readFavoritePokemonIds().length;
     if (favoritesQuantity === 0) {
