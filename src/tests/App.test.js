@@ -46,7 +46,7 @@ describe('Verifica todas as funcionalidades do component App', () => {
       expect(history.location.pathname).toBe('/favorites');
     });
 
-    test('Se é redirecionada para a página Not Found ao entrar em uma URL "abc".', () => {
+    test('Se é redirecionada para a página Not Found ao entrar numa URL "/abc".', () => {
       const { history } = renderWithRouter(<App />);
 
       history.push('/abc');
